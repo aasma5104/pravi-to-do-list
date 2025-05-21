@@ -1,0 +1,268 @@
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+        }
+
+        h1, h2 {
+            color: #60B5FF;
+            text-align: center;
+        }
+        h3 {
+            color: #1B56FD;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        button {
+            background-color: #60B5FF; /* Rich purple for buttons */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #1d77c7; /* Darker purple */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgb(255, 178, 44);
+        }
+
+        .info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        button {
+            padding: 10px 14px;
+            font-size: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .toggle-btn {
+            background-color: #1B56FD;
+        }
+        .toggle-btn:hover {
+            background-color: #0e3fc6;
+        }
+
+        .edit-btn {
+            background-color: #2DAA9E;
+        }
+        .edit-btn:hover {
+            background-color: #117b71;
+        }
+
+        .delete-btn {
+            background-color: #FF748B;
+        }
+        .delete-btn:hover {
+            background-color: #dc3b56;
+        }
+
+        .completion {
+            font-weight: bold;
+            color: green;
+        }
+
+        .incomplete {
+            color: red;
+        }
+
+        .no-activities {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .modal input {
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .modal select {
+            width: 95%;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        .save-btn {
+            background-color: #2DAA9E;
+        }
+        .save-btn:hover {
+            background-color: #117b71;
+        }
+
+        .cancel-btn {
+            background-color: #FF748B;
+        }
+        .cancel-btn:hover {
+            background-color: #dc3b56;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+
+        /* For mobile devices (less than 600px) */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .modal {
+        width: 90%;
+    }
+}
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+}
+/* For tablets (600px to 900px) */
+
+.priority-high {
+    color: black;
+    /* background-color: red; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.priority-medium {
+    color: black;
+    /* background-color: orange; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.priority-low {
+    color: black;
+    /* background-color: green; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        margin: 30px;
+        padding: 25px;
+    }
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .modal {
+        width: 80%;
+    }
+}

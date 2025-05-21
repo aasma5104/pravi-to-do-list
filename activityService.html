@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Manager</title>
+    <link rel="stylesheet" href="activityService.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Activity Manager</h1>
+        <form id="activityForm">
+            <div class="form-group">
+                <label for="activityTitle">Activity Title</label>
+                <input type="text" id="activityTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="activityId">Activity ID</label>
+                <input type="number" id="activityId" required>
+            </div>
+            <div class="form-group">
+                <label for="activityPriority">Priority</label>
+                <select id="activityPriority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <button type="submit" onclick="addActivity()">Add Activity</button>
+            <a href="activityList.html"><button type="button">Show Activities</button></a>
+        </form>
+
+        <!-- <h2 style="margin-top: 2rem;">Activities List</h2>
+        <ul id="activityList" style="margin-top: 1rem; list-style-type: none; padding: 0;"></ul> -->
+    </div>
+
+    <script src="activityService.js">
+    </script>
+</body>
+</html>

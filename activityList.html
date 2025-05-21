@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Manager</title>
+    <link rel="stylesheet" href="activityList.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Activity Manager</h1>
+
+        <!-- Placeholder for activities -->
+        <h2>Activity List</h2>
+        <input type="text" id="searchBar" placeholder="Search Activities..." oninput="filterActivities()" class="search-bar">
+        <ul id="activityList"></ul>
+        <button id="b1" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Modal for editing activity -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="editModal">
+        <h3>Edit Activity</h3>
+        <input type="number" id="editId" placeholder="Edit ID">
+        <input type="text" id="editTitle" placeholder="Edit Title">
+        <select id="editPriority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <button class="save-btn" onclick="saveEdit()">Save</button>
+        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+    </div>
+
+    <script src="activityList.js"></script>
+</body>
+</html>
